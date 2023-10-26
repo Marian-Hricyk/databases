@@ -1,7 +1,7 @@
-SELECT c.NAME AS "NAME", COUNT(p.ID) AS "PROJECT_COUNT"
+SELECT c."NAME" AS "NAME", COUNT(p.ID) AS "PROJECT_COUNT"
 FROM client c
 LEFT JOIN project p ON c.ID = p.CLIENT_ID
-GROUP BY c.NAME
+GROUP BY c."NAME"
 HAVING COUNT(p.ID) = (
     SELECT MAX(project_count)
     FROM (
@@ -10,4 +10,4 @@ HAVING COUNT(p.ID) = (
         GROUP BY CLIENT_ID
     ) AS project_counts
 )
-ORDER BY c.NAME;
+ORDER BY c."NAME";

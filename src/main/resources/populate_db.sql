@@ -10,13 +10,14 @@ VALUES
     (8,'Sarah Taylor', '1994-05-06', 'Middle', 4300),
     (9,'David Clark', '1987-06-13', 'Junior', 2600),
     (10,'Linda Martinez', '1999-04-22', 'Trainee', 1100);
-INSERT INTO client (ID"NAME")
-VALUES
-    (1,'Client 1'),
-    (2,'Client 2'),
-    (3,'Client 3'),
-    (4,'Client 4'),
-    (5,'Client 5');
+
+  insert into client (ID,"NAME")
+  VALUES
+(1, 'Stark'),
+(2, 'Lannister'),
+(3, 'Targaryen'),
+(4, 'Baratheon'),
+(5, 'Greyjoy');
 INSERT INTO project (ID,CLIENT_ID, START_DATE, FINISH_DATE)
 VALUES
     (1,1, '2023-01-01', '2023-03-31'),
@@ -29,7 +30,7 @@ VALUES
     (8,3, '2023-08-10', '2023-12-25'),
     (9,4, '2023-09-05', '2023-11-20'),
     (10,5, '2023-10-15', '2023-12-31');
-INSERT INTO project_worker (PROJECT_ID, WORKER_ID)
+   INSERT INTO project_worker (PROJECT_ID, WORKER_ID)
 VALUES
     (1, 1),
     (1, 2),
